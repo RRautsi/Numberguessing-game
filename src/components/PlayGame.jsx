@@ -21,13 +21,13 @@ export default class PlayGame extends React.Component {
 
   setNavigateToHome = () => this.setState({navigateHome: true})
 
-  onChange = (e) => this.setState({guessValue: Number(e.target.value)})
+  onChange = (e) => this.setState({guessValue: e.target.value})
 
   onSubmit(e) {
     e.preventDefault()
-    const input = this.state.guessValue
+    const input = Number(this.state.guessValue)
     const target = this.props.numberToGuess
-    if (input <= this.state.upperLimit && input >= this.state.lowerLimit) {
+    if (input <= Number(this.state.upperLimit) && input >= Number(this.state.lowerLimit)) {
       if (input < target) {
         this.setState({lowerLimit: input, errorMessage: "Your guess was too low"})
         setTimeout(() => this.setState({errorMessage: null}), 3000)
