@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .input-style {
+    @apply border m-auto text-blue-900 text-sm rounded-lg focus:ring-blue-500 p-0.5 focus:border-blue-500 block w-44 md:w-64 bg-white border-gray-600 text-black focus:ring-blue-500 focus:border-blue-500;
+  }
+  .button-custom {
+    @apply overflow-hidden m-auto rounded-md bg-amber-200 block w-32 shadow hover:bg-amber-100 active:bg-amber-200 
+  }
+  .button-custom-disabled {
+    @apply overflow-hidden m-auto rounded-md bg-amber-200 block w-32 shadow disabled:opacity-75 cursor-not-allowed
+  }
+  .error-message {
+    @apply bg-red-600 text-lg border-solid rounded-xl w-80 md:w-96 m-auto mt-10 text-center
+  }
+  .message {
+    @apply bg-emerald-300 text-3xl p-3 border border-black rounded-xl w-80 md:w-96 m-auto mt-10 text-center
+  }
+}
