@@ -35,7 +35,7 @@ export default class PlayGame extends React.Component {
         this.setState({upperLimit: input, errorMessage: "Your guess was too high"})
         setTimeout(() => this.setState({errorMessage: null}), 3000)
       } else {
-        this.setState({message: "Congratulations, you won!", inputDisabled: true})
+        this.setState({message: "Congratulations, you won! Correct number was: " + this.props.numberToGuess, inputDisabled: true})
         this.props.setLeaderboard({name: this.props.name, guessCount: this.state.guessCount + 1})
       }
       this.setState({

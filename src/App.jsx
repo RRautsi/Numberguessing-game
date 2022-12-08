@@ -35,9 +35,8 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.leaderboard)
     return (
-      <div className="h-screen overflow-auto bg-gradient-to-t from-emerald-500 via-green-400 to-emerald-500">
+      <div className="h-screen overflow-auto bg-gradient-to-t from-emerald-500 via-emerald-400 to-emerald-500">
         <Routes>
           <Route
             exact path="/"
